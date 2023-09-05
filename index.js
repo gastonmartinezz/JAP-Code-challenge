@@ -4,7 +4,7 @@ const form = document.querySelector('form');
 async function postJSON(e) {
     e.preventDefault();
 
-    const formulario = new FormData(this);
+    const formulario = new FormData(form);
 
     let json = {};
 
@@ -14,7 +14,7 @@ async function postJSON(e) {
 
     try {
         const response = await fetch(url, {
-            method: "POST",
+            method: "POST",           
             headers: {
                 'Content-Type': 'application/json',
             },
